@@ -2,6 +2,14 @@
 
 Derin öğrenme yöntemleri kullanılarak NSL-KDD veri seti üzerinde ağ saldırısı tespiti.
 
+Bu projede ağ trafiği üzerinde saldırı tespiti yapmak için üç farklı derin öğrenme yaklaşımı uygulanmıştır.
+
+- CNN tabanlı sınıflandırma modeli
+- Autoencoder + CNN hibrit modeli (AE-CNN)
+- Variational Autoencoder (VAE) tabanlı anomali tespiti
+
+Amaç, bu modellerin performanslarını karşılaştırarak ağ güvenliği için en uygun yaklaşımı analiz etmektir.
+
 ---
 
 ## 📁 Proje Yapısı
@@ -9,9 +17,9 @@ Derin öğrenme yöntemleri kullanılarak NSL-KDD veri seti üzerinde ağ saldı
 ```
 ├── odev1_cnn_aecnn.py      # CNN ve AE-CNN modelleri
 ├── odev2_vae_anomaly.py    # VAE anomali tespiti
-├── KDDTrain+.txt           # Eğitim verisi (aşağıdan indir)
-├── KDDTest+.txt            # Test verisi (aşağıdan indir)
-└── README.md
+├── KDDTrain+.txt           # Eğitim veri seti
+├── KDDTest+.txt            # Test veri seti
+└── README.md               # Proje açıklaması
 ```
 
 ---
@@ -76,3 +84,16 @@ python odev2_vae_anomaly.py
 - **CNN**: 1D evrişimli sinir ağı ile doğrudan sınıflandırma
 - **AE-CNN**: Autoencoder encoder kısmı + CNN sınıflandırıcı (iki aşamalı)
 - **VAE**: Variational Autoencoder ile denetimsiz anomali tespiti
+
+---
+
+📚 Kaynaklar
+
+- NSL-KDD Dataset  
+  https://www.unb.ca/cic/datasets/nsl.html
+
+- Kingma & Welling (2014)  
+  Auto-Encoding Variational Bayes
+
+- LeCun et al. (2015)  
+  Deep Learning – Nature
